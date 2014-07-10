@@ -7,9 +7,6 @@
 #//
 #// Built on Go, by gophers.
 #//
-#// Ottemo makes use of the most excellent Martini framework and is committed to
-#// building the fastest, most scalable ecommerce solutions possible.
-#//
 #// To contribute or use Ottemo, please visit:
 #//  github.com/ottemo/
 #//
