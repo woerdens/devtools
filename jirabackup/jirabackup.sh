@@ -31,7 +31,7 @@
 #//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #//  SOFTWARE.
 
-CONFIG_FILE='/opt/atlassian/jirabackup.conf'
+CONFIG_FILE='/opt/atlassian/jira/conf/jirabackup.conf'
 TIMESTAMP=$(date +'%Y-%m-%d-%H-%M')
 
 if [ -e ${CONFIG_FILE} ]; then
