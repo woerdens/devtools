@@ -42,11 +42,11 @@ else
 fi
 
 ATTACHMENT_BACKUP="${BACKUP_DIR}/jira-attachments-${TIMESTAMP}.tar"
-SQLDUMP="${BACKUP_DIR}/jira-database-dump-$TIMESTAMP}.sql"
+SQLDUMP="${BACKUP_DIR}/jira-database-dump-${TIMESTAMP}.sql"
 
 function setup()
 {
-  if [ ! -d "$BACKUP_DIR" ]; then
+  if [ ! -d "${BACKUP_DIR}" ]; then
     echo "Creating ${BACKUP_DIR}"
     mkdir -p "${BACKUP_DIR}"
   fi
