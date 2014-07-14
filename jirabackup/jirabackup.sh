@@ -43,6 +43,7 @@ fi
 
 ATTACHMENT_BACKUP="${BACKUP_DIR}/jira-attachments-${TIMESTAMP}.tar"
 SQLDUMP="${BACKUP_DIR}/jira-database-dump-${TIMESTAMP}.sql"
+BACKUP_TAR="${BACKUP_DIR}/jira-backup-${TIMESTAMP}.tar"
 
 function setup()
 {
@@ -66,12 +67,20 @@ function mysqldump()
   echo "Created {$SQLDUMP}"
 }
 
+function tarball()
+{
+  echo "Creating tarball"
+  /bin/tar -cpf ${BACKUP_DIR} ${BACKUP_TAR}
+  echo "Created ${BACKUP_TAR}"
+}
+
 function main()
 {
   echo "Backing up JIRA"
   setup
   backup_attachments
   mysqldump
+  tarball
 }
 
 main
